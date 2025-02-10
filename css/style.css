@@ -52,14 +52,24 @@ body {
   gap: 22px;
 }
 
-.nav-bar li {
+.nav-bar a:link,
+.nav-bar a:visited {
+  text-decoration: none;
+  color: #087f5b;
   padding: 6px 12px;
   border-radius: 8px;
+  display: inline-block;
+}
+.nav-bar a:hover,
+.nav-bar a:active {
+  border: 2px solid #087f5b;
+  padding: 4px 10px;
 }
 
-.nav-open {
-  background-color: #087f5b;
+.nav-open a:link,
+.nav-open a:visited {
   color: #f8f9fa;
+  background-color: #087f5b;
 }
 
 /* PROFILE SECTION */
