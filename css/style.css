@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Inter";
+  font-size: 18px;
+  color: #343a40;
+  background-color: #f8f9fa;
+  border-bottom: 5px solid #087f5b;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "picture profile"
+    "project project"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  row-gap: 64px;
+  column-gap: 48px;
+}
+
+/* HEADER SECTION */
+
+.header-flex {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #087f5b;
+  border-bottom: 5px solid #087f5b;
+}
+
+.header-flex h1 {
+  font-size: 56px;
+  padding: 8px 18px;
+}
+
+.nav-bar {
+  padding: 8px 18px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.nav-bar li {
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.nav-open {
+  background-color: #087f5b;
+  color: #f8f9fa;
+}
+
+/* PROFILE SECTION */
+.profile-picture-section {
+  grid-area: picture;
+  background-image: url("../img/profile_placeholder.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.profile-text-section {
+  grid-area: profile;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #087f5b;
+  color: #f8f9fa;
+}
+
+.profile-text-section h2 {
+  margin-bottom: 12px;
+}
+
+.profile-text-section p {
+  line-height: 1.5;
+}
+
+/* PROJECT SECTION */
+.project-section {
+  grid-area: project;
+}
+
+.projects-header {
+  margin-bottom: 18px;
+  padding: 0 18px;
+  color: #087f5b;
+}
+
+.project-cards {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.project-card {
+  border-radius: 8px;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.project-text {
+  padding: 18px;
+}
+
+.project-text h3 {
+  margin-bottom: 12px;
+}
+
+.project-text p {
+  line-height: 1.5;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  grid-area: footer;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  body {
+    width: 100vw;
+    font-size: 14px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "picture"
+      "profile"
+      "project"
+      "footer";
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+    column-gap: 0;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .header-flex h1 {
+    font-size: 22px;
+    padding: 8px 8px;
+  }
+
+  .nav-bar {
+    padding: 8px 12px;
+  }
+
+  .nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+  }
+
+  .nav-bar li {
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+
+  .profile-picture-section {
+    width: 90%;
+    height: 200px;
+  }
+
+  .profile-text-section {
+    width: 90%;
+  }
+
+  .project-cards {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  .projects-header {
+    width: 90%;
+    margin: 8px auto;
+  }
+
+  .project-text {
+    padding: 12px;
+  }
+
+  .project-text h3 {
+    margin-bottom: 8px;
+  }
+
+  .project-text p {
+    line-height: 1.2;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
