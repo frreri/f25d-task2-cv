@@ -11,7 +11,6 @@ body {
   font-size: 18px;
   color: #343a40;
   background-color: #f8f9fa;
-  border-bottom: 5px solid #087f5b;
 }
 
 .grid-container {
@@ -164,8 +163,10 @@ body {
       "project"
       "footer";
     grid-template-columns: 1fr;
+    width: 94%;
     row-gap: 48px;
     column-gap: 0;
+    margin: 0 auto;
     align-items: center;
     justify-items: center;
   }
@@ -198,25 +199,17 @@ body {
   }
 
   .profile-picture-section {
-    width: 90%;
-    height: 200px;
-  }
-
-  .profile-text-section {
-    width: 90%;
+    width: 100%;
+    height: 220px;
   }
 
   .project-cards {
-    width: 90%;
-    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-    row-gap: 16px;
+    gap: 16px;
   }
 
   .projects-header {
-    width: 90%;
-    margin: 8px auto;
+    margin-bottom: 10px;
   }
 
   .project-text {
