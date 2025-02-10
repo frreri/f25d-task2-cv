@@ -185,9 +185,16 @@ body {
     gap: 12px;
   }
 
-  .nav-bar li {
+  .nav-bar a:link,
+  .nav-bar a:visited {
     padding: 6px 12px;
     border-radius: 8px;
+  }
+
+  .nav-bar a:hover,
+  .nav-bar a:active {
+    border: 2px solid #087f5b;
+    padding: 4px 10px;
   }
 
   .profile-picture-section {
