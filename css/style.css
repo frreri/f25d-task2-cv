@@ -20,9 +20,7 @@ body {
 
   color: #343a40;
   background-color: var(--background-color);
-}
 
-.grid-container {
   display: grid;
   grid-template-areas:
     "header header"
@@ -33,6 +31,10 @@ body {
   row-gap: 64px;
   column-gap: 32px;
 }
+
+/* .grid-container {
+  
+} */
 
 /* HEADER SECTION */
 
@@ -216,7 +218,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .grid-container {
+  /* .grid-container {
+    
+  
+  } */
+
+  body {
     display: grid;
     grid-template-areas:
       "header"
@@ -225,12 +232,10 @@ body {
       "project"
       "footer";
     grid-template-columns: 1fr;
-
     row-gap: 48px;
     column-gap: 0;
     margin: 0 auto;
     align-items: center;
-    /* justify-items: center; */
   }
 
   .header-flex {
