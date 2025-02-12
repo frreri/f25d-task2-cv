@@ -172,7 +172,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 400ms linear;
+  transition: background-color 200ms linear;
 }
 
 .footer a:hover,
@@ -185,7 +185,7 @@ body {
   height: 28px;
   /* stroke: #087f5b; */
   fill: #087f5b;
-  transition: fill 400ms linear;
+  transition: fill 200ms linear;
 }
 
 .footer a:hover .footer-icon,
