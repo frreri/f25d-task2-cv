@@ -165,11 +165,32 @@ body {
   text-align: center;
 }
 
+.footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 400ms linear;
+}
+
+.footer a:hover,
+.footer a:active {
+  background-color: #087f5b;
+}
+
 .footer-icon {
   width: 28px;
   height: 28px;
   /* stroke: #087f5b; */
   fill: #087f5b;
+  transition: fill 400ms linear;
+}
+
+.footer a:hover .footer-icon,
+.footer a:active .footer-icon {
+  fill: #f8f9fa;
 }
 
 @media only screen and (max-width: 1200px) {
