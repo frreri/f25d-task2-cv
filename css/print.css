@@ -24,6 +24,11 @@
     width: 90% !important;
   }
 
+  .resume-article h3 {
+    background-color: black !important;
+    color: white !important;
+  }
+
   .resume-section {
     page-break-inside: avoid;
   }
