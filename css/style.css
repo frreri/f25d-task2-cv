@@ -137,7 +137,7 @@ a:visited {
 
 .project-cards a:link,
 .project-cards a:visited {
-  color: #343a40;
+  color: var(--main-text-color);
 }
 .project-card {
   background-color: var(--secondary-background-color);
@@ -330,6 +330,33 @@ a:visited {
 
 /* The media breakpoints are set where my page naturally "breaks" when resizing  instead
    of following some set values, this is according to codecademy Intermediate CSS course */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #adb5bd;
+    --main-background-color: #212529;
+    --secondary-background-color: #495057;
+    --main-text-color: #f1f3f5;
+  }
+
+  .profile-picture-section {
+    background-image: url("../img/profile_image_dark.png");
+  }
+
+  .profile-text-section {
+    background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
+  }
+
+  .resume-article {
+    background-color: var(--secondary-background-color);
+  }
+
+  .contact-section {
+    background-color: var(--secondary-background-color);
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   body {
     width: 88vw;
