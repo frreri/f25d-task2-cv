@@ -56,6 +56,12 @@ body {
   font-style: italic;
 }
 
+.header-flex a:link,
+.header-flex a:visited {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
 .nav-bar {
   padding: 0.5rem 1rem;
 }
@@ -240,6 +246,14 @@ body {
 
 .resume-section {
   margin: 1.5rem 0;
+}
+
+.resume-section:first-child {
+  margin-top: 0;
+}
+
+.resume-section:last-child {
+  margin-bottom: 0;
 }
 
 .role-list {
