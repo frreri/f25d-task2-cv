@@ -37,6 +37,12 @@ body {
   background-color: var(--main-background-color);
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
 /* HEADER SECTION */
 
 .header-flex {
@@ -56,12 +62,6 @@ body {
   font-style: italic;
 }
 
-.header-flex a:link,
-.header-flex a:visited {
-  text-decoration: none;
-  color: var(--main-color);
-}
-
 .nav-bar {
   padding: 0.5rem 1rem;
 }
@@ -74,8 +74,6 @@ body {
 
 .nav-bar a:link,
 .nav-bar a:visited {
-  text-decoration: none;
-  color: var(--main-color);
   padding: 6px 12px;
   border-radius: var(--main-border-radius);
   display: inline-block;
@@ -139,7 +137,6 @@ body {
 
 .project-cards a:link,
 .project-cards a:visited {
-  text-decoration: none;
   color: #343a40;
 }
 .project-card {
