@@ -7,6 +7,10 @@ Live Preview: [Click here!](https://frreri.github.io/f25d-task2-cv/)
 This is a simple resume page I made as the second task in my Frontend Development class.
 I've purposefully used only HTML and CSS this time, as we're building upon this and including javascript in task 3.
 
+
+I have included a print css-file for the resume page, so it looks good when printing on paper
+
+
 ## Now with automatic dark or light mode depending on user's OS settings!
 
 Light mode:
