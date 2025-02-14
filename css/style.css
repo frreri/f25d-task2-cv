@@ -248,7 +248,7 @@ body {
   margin: 1.5rem 0;
 }
 
-.resume-section:first-child {
+.resume-section:nth-child(2) {
   margin-top: 0;
 }
 
