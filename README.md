@@ -5,7 +5,11 @@ I've purposefully used only HTML and CSS this time, as we're building upon this 
 
 ## Now with automatic dark or light mode depending on user's OS settings!
 
-![Image](https://github.com/user-attachments/assets/b1253b5b-80dc-480e-b8ee-c30b4299cda8)
+Light mode:
+![Image](https://github.com/user-attachments/assets/fd0e17cb-379d-42e0-a188-5bd7e3faae65)
+
+Dark mode:
+![Image](https://github.com/user-attachments/assets/49c8e0cd-c0a4-4206-891d-c3f660a8a8b4)
 
 Live Preview: [Click here!](https://frreri.github.io/f25d-task2-cv/)
 
