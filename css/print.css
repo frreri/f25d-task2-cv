@@ -1,7 +1,12 @@
 /* PRINT STYLE FOR RESUME PAGE */
 @media print {
+  * {
+    background-color: white !important;
+    color: black !important;
+  }
   body {
     margin: 0 !important;
+    width: 100vw !important;
   }
 
   .header-flex,
@@ -10,10 +15,19 @@
   }
 
   .main-container {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
 
   .resume-article {
     box-shadow: none !important;
+    width: 90% !important;
+  }
+
+  .resume-section {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 1cm;
   }
 }
