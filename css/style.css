@@ -343,17 +343,11 @@ a:visited {
     background-image: url("../img/profile_image_dark.png");
   }
 
-  .profile-text-section {
-    background-color: var(--secondary-background-color);
-    color: var(--main-text-color);
-  }
-
-  .resume-article {
-    background-color: var(--secondary-background-color);
-  }
-
+  .profile-text-section,
+  .resume-article,
   .contact-section {
     background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
   }
 }
 
