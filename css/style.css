@@ -236,8 +236,11 @@ body {
 }
 
 .resume-article h3 {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .resume-article ul {

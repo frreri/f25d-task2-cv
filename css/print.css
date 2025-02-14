@@ -5,7 +5,7 @@
     color: black !important;
   }
   body {
-    margin: 0 !important;
+    margin: 1cm !important;
     width: 100vw !important;
   }
 
@@ -20,14 +20,11 @@
 
   .resume-article {
     box-shadow: none !important;
+    padding: 0 !important;
     width: 90% !important;
   }
 
   .resume-section {
     page-break-inside: avoid;
-  }
-
-  @page {
-    margin: 1cm;
   }
 }
