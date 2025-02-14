@@ -1,0 +1,19 @@
+/* PRINT STYLE FOR RESUME PAGE */
+@media print {
+  body {
+    margin: 0 !important;
+  }
+
+  .header-flex,
+  .footer {
+    display: none !important;
+  }
+
+  .main-container {
+    justify-content: flex-start;
+  }
+
+  .resume-article {
+    box-shadow: none !important;
+  }
+}
