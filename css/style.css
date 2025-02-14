@@ -206,6 +206,45 @@ body {
   fill: var(--main-background-color);
 }
 
+/* ////////////////////////////////////////////////////// */
+/* //////////////// RESUME PAGE SPECIFIC //////////////// */
+/* ////////////////////////////////////////////////////// */
+
+.main-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+.resume-article {
+  width: 80%;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 2rem;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.resume-article h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resume-article ul {
+  margin-left: 1.5rem;
+}
+
+.role-list {
+  margin-bottom: 0.5rem;
+}
+
+.role-item {
+  margin: 0.2rem 0;
+}
+
+.summary-text {
+  margin-bottom: 0.25rem;
+}
+
 /* The media breakpoints are set where my page naturally "breaks" when resizing  instead
    of following some set values, this is according to codecademy Intermediate CSS course */
 @media only screen and (max-width: 1200px) {
