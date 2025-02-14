@@ -1,6 +1,11 @@
 :root {
   --main-color: #1864ab;
-  --background-color: #f8f9fa;
+  --main-background-color: #f8f9fa;
+  /* secondary background color added in preparation for automatic dark mode */
+  /* this will be used to have a lighter background on projects cards for example */
+  --secondary-background-color: #f8f9fa;
+  --main-text-color: #343a40;
+  --main-border-radius: 8px;
 }
 
 * {
@@ -9,37 +14,35 @@
   box-sizing: border-box;
 }
 
+/* Setting document font-size so that i can use rem based on this.
+   Then setting a smaller font-size in media query for smaller screens will scale everything with a rem size down automatically */
 html {
   font-size: 20px;
 }
 
+/* Setting the body to be a grid container to reduce number of wrappers and indentation
+   Learned this is okay in codecademy study material */
 body {
-  width: 70%;
-  margin: 1rem auto;
-  font-family: "Inter";
-
-  color: #343a40;
-  background-color: var(--background-color);
-
   display: grid;
-  grid-template-areas:
-    "header header"
-    "picture profile"
-    "project project"
-    "footer footer";
-  grid-template-columns: 1fr 1fr;
-  row-gap: 64px;
+  grid-template-columns: 1fr 1fr; /* writing rows explicitly as it is shorter with 2 rows than repeat() */
+  row-gap: 68px;
   column-gap: 32px;
-}
 
-/* .grid-container {
-  
-} */
+  width: 70vw;
+  margin: 1rem auto;
+
+  font-family: "Inter";
+  color: var(--main-text-color);
+
+  background-color: var(--main-background-color);
+}
 
 /* HEADER SECTION */
 
 .header-flex {
-  grid-area: header;
+  /* Using 1 / -1 for the sections that should span full page width,
+     this way i don't have to set another value for grid-column for smaller screen */
+  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,13 +57,13 @@ body {
 }
 
 .nav-bar {
-  padding: 8px 18px;
+  padding: 0.5rem 1rem;
 }
 
 .nav-bar ul {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 1rem;
 }
 
 .nav-bar a:link,
@@ -68,42 +71,44 @@ body {
   text-decoration: none;
   color: var(--main-color);
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: var(--main-border-radius);
   display: inline-block;
   transition: all 400ms ease;
 }
 .nav-bar a:hover,
 .nav-bar a:active {
-  color: var(--background-color);
+  color: var(--main-background-color);
   background-color: var(--main-color);
 }
 
 .nav-open a:link,
 .nav-open a:visited {
-  color: var(--background-color);
+  color: var(--main-background-color);
   background-color: var(--main-color);
 }
 
 /* PROFILE SECTION */
 .profile-picture-section {
-  grid-area: picture;
+  grid-column: 1; /* As it should only span 1 column it is enough to write start line */
+  width: 100%; /* Making extra sure this div is as big as the grid cell as it has no content, only pic as background */
+  height: 100%;
   background-image: url("../img/profile_image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
+  border-radius: var(--main-border-radius);
 }
 
 .profile-text-section {
-  grid-area: profile;
+  grid-column: 2; /* See comment in .profile-picture-section */
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: var(--main-border-radius);
   background-color: var(--main-color);
-  color: var(--background-color);
+  color: var(--main-background-color);
 }
 
 .profile-text-section h2 {
-  margin-bottom: 12px;
+  margin-bottom: 0.6rem;
 }
 
 .profile-text-section p {
@@ -112,12 +117,11 @@ body {
 
 /* PROJECT SECTION */
 .project-section {
-  grid-area: project;
+  grid-column: 1 / -1;
 }
 
 .projects-header {
-  margin-bottom: 18px;
-  padding: 0 18px;
+  margin-bottom: 1rem;
   color: var(--main-color);
 }
 
@@ -133,7 +137,8 @@ body {
   color: #343a40;
 }
 .project-card {
-  border-radius: 8px;
+  background-color: var(--secondary-background-color);
+  border-radius: var(--main-border-radius);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
   transition: all 500ms ease;
   height: 100%;
@@ -145,7 +150,7 @@ body {
 
 .project-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--main-border-radius);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -155,7 +160,7 @@ body {
 }
 
 .project-text h3 {
-  margin-bottom: 12px;
+  margin-bottom: 0.5rem;
 }
 
 .project-text p {
@@ -165,11 +170,11 @@ body {
 /* FOOTER SECTION */
 
 .footer {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
   padding: 2rem;
   gap: 1rem;
-  grid-area: footer;
   text-align: center;
 }
 
@@ -198,9 +203,11 @@ body {
 
 .footer a:hover .footer-icon,
 .footer a:active .footer-icon {
-  fill: var(--background-color);
+  fill: var(--main-background-color);
 }
 
+/* The media breakpoints are set where my page naturally "breaks" when resizing  instead
+   of following some set values, this is according to codecademy Intermediate CSS course */
 @media only screen and (max-width: 1200px) {
   body {
     width: 88vw;
@@ -209,7 +216,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   body {
@@ -218,78 +225,36 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* .grid-container {
-    
-  
-  } */
-
   body {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "picture"
-      "profile"
-      "project"
-      "footer";
     grid-template-columns: 1fr;
-    row-gap: 48px;
-    column-gap: 0;
+    row-gap: 2rem;
     margin: 0 auto;
-    align-items: center;
   }
 
+  /* HEADER SECTION */
   .header-flex {
     flex-direction: column;
   }
 
-  .header-flex h1 {
-    padding: 8px 8px;
-  }
-
   .nav-bar {
-    padding: 8px 12px;
     font-size: 1.3rem;
-    padding-bottom: 1.4rem;
+    margin-bottom: 1rem;
   }
 
-  .nav-bar ul {
-    list-style: none;
-    display: flex;
-    gap: 12px;
-  }
-
-  .nav-bar a:link,
-  .nav-bar a:visited {
-    padding: 6px 12px;
-    border-radius: 8px;
-  }
-
-  .nav-bar a:hover,
-  .nav-bar a:active {
-    border: 2px solid var(--main-color);
-    padding: 4px 10px;
-  }
-
+  /* PROFILE SECTION */
   .profile-picture-section {
+    grid-column: 1;
     width: 100%;
     height: 280px;
   }
 
+  .profile-text-section {
+    grid-column: 1;
+  }
+
   .project-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .projects-header {
-    margin-bottom: 10px;
-  }
-
-  .project-text {
-    padding: 12px;
-  }
-
-  .project-text h3 {
-    margin-bottom: 8px;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .project-text p {
