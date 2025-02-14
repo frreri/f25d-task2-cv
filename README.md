@@ -3,6 +3,8 @@
 This is a simple resume page I made as the second task in my Frontend Development class.
 I've purposefully used only HTML and CSS this time, as we're building upon this and including javascript in task 3.
 
+![Image](https://github.com/user-attachments/assets/b1253b5b-80dc-480e-b8ee-c30b4299cda8)
+
 
 Live Preview: [Click here!](https://frreri.github.io/f25d-task2-cv/)
 
