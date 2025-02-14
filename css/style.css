@@ -224,6 +224,11 @@ body {
   line-height: 1.4;
 }
 
+.resume-article hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
 .resume-article h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -231,6 +236,10 @@ body {
 
 .resume-article ul {
   margin-left: 1.5rem;
+}
+
+.resume-section {
+  margin: 1.5rem 0;
 }
 
 .role-list {
@@ -241,15 +250,35 @@ body {
   margin: 0.2rem 0;
 }
 
+.role-title,
+.role-duration {
+  line-height: 1.2;
+}
+.role-title {
+  font-weight: bold;
+}
+.role-duration {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 0.2em;
+}
+
 .summary-text {
   margin-bottom: 0.25rem;
 }
+
+/* ///////////////////////////////////////////////////// */
+/* //////////////// MEDIA QUERY SECTION //////////////// */
+/* ///////////////////////////////////////////////////// */
 
 /* The media breakpoints are set where my page naturally "breaks" when resizing  instead
    of following some set values, this is according to codecademy Intermediate CSS course */
 @media only screen and (max-width: 1200px) {
   body {
     width: 88vw;
+  }
+  .resume-article {
+    width: 90%;
   }
 }
 
@@ -298,5 +327,15 @@ body {
 
   .project-text p {
     line-height: 1.2;
+  }
+
+  /* /////////////////////// */
+  /* /// RESUME SPECIFIC /// */
+  /* /////////////////////// */
+
+  .resume-article {
+    width: 100%;
+    padding: 1rem;
+    font-size: 15px;
   }
 }
