@@ -306,25 +306,14 @@ a:visited {
   margin-bottom: 0.5rem;
 }
 .karlskoga-map {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   margin-top: 1rem;
   width: 100%;
   height: 40vh;
+  max-height: 390px;
+  border: none;
   border-radius: var(--main-border-radius);
-  background-image: url("../img/karlskoga_map.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
-.placeholder-text {
-  width: 90%;
-  background-color: var(--main-color);
-  color: var(--main-background-color);
-  margin-bottom: 1rem;
-}
 /* ///////////////////////////////////////////////////// */
 /* //////////////// MEDIA QUERY SECTION //////////////// */
 /* ///////////////////////////////////////////////////// */
