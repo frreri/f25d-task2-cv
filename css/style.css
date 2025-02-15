@@ -17,7 +17,7 @@
 /* Setting document font-size so that i can use rem based on this.
    Then setting a smaller font-size in media query for smaller screens will scale everything with a rem size down automatically */
 html {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Setting the body to be a grid container to reduce number of wrappers and indentation
@@ -29,6 +29,7 @@ body {
   column-gap: 32px;
 
   width: 70vw;
+  max-width: 1200px;
   margin: 1rem auto;
 
   font-family: "Inter";
