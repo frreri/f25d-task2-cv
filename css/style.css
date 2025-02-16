@@ -163,6 +163,7 @@ a:visited {
   border-radius: var(--main-border-radius);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border: 1px solid var(--secondary-background-color);
 }
 
 .project-text {
@@ -304,7 +305,7 @@ a:visited {
 /* ////////////////////////////////////////////////////// */
 
 .contact-section {
-  width: 50%;
+  width: 100%;
   background-color: var(--main-background-color);
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
   border-radius: var(--main-border-radius);
@@ -360,10 +361,6 @@ a:visited {
   }
   .resume-article {
     width: 90%;
-  }
-
-  .contact-section {
-    width: 70%;
   }
 
   .karlskoga-map {
@@ -433,10 +430,6 @@ a:visited {
   /* /////////////////////// */
   /* /// CONTACT SPECIFIC /// */
   /* /////////////////////// */
-
-  .contact-section {
-    width: 94%;
-  }
 
   .karlskoga-map {
     height: 30vh;
