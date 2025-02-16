@@ -36,6 +36,8 @@ body {
   color: var(--main-text-color);
 
   background-color: var(--main-background-color);
+  /* adding a background image that when repeated will look like a cool pattern (as used in my profile image) */
+  /* the linear gradient is added before as a transparent filter to make the pattern stand out less */
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.4),
       rgba(255, 255, 255, 0.4)
