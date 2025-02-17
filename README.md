@@ -13,17 +13,22 @@ I have included a print css-file for the resume page, so it looks good when prin
 
 ## Now with automatic dark or light mode depending on user's OS settings!
 
+
 Light mode:
 
 
-![Image](https://github.com/user-attachments/assets/fd0e17cb-379d-42e0-a188-5bd7e3faae65)
+![Image](https://github.com/user-attachments/assets/4924d670-f61b-4f25-a006-101c2267ef89)
+
 
 Dark mode:
 
 
-![Image](https://github.com/user-attachments/assets/49c8e0cd-c0a4-4206-891d-c3f660a8a8b4)
+![Image](https://github.com/user-attachments/assets/dff5f1ce-fa07-49c3-b8b3-331403ea08c1)
 
 
 
 
 ###### The HTML validates with no errors or warnings at validator.w3.org (there are some info messages regarding the traling slash /> on self closing tags that Prettier adds that i found annoying, but i learned that it isn't a problem and just info in case they were used for the wrong reason. Even code examples at MDN web docs use the trailing slashes and Prettier as formatter)
+
+
+
